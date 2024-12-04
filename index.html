@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+  </head>
+  <body>
+    <!-- SECTION Global Container -->
+    <div class="grid-container">
+      <div class="grid-item crime-filters">
+        <div class="mt-1">
+          <!-- NOTE Suspect Filter Buttons -->
+          <small class="mb-1 d-block">Suspect Background</small>
+          <span class="filter-label">Age:</span>
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-age"
+            id="s18"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-success btn-sm"
+            onclick="updateSuspectAge('<18');"
+            for="s18"
+          >
+            &lt;18</label
+          >
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-age"
+            id="s18-24"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-success btn-sm"
+            onclick="updateSuspectAge('18-24')"
+            for="s18-24"
+          >
+            18-24</label
+          >
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-age"
+            id="s25-44"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-success btn-sm"
+            onclick="updateSuspectAge('25-44')"
+            for="s25-44"
+          >
+            25-44</label
+          >
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-age"
+            id="s45-64"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-success btn-sm"
+            onclick="updateSuspectAge('45-64')"
+            for="s45-64"
+          >
+            45-64</label
+          >
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-age"
+            id="s65+"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-success btn-sm"
+            onclick="updateSuspectAge('65+')"
+            for="s65+"
+          >
+            65+</label
+          >
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-age"
+            id="s-age-reset"
+            autocomplete="off"
+            checked
+          />
+          <label
+            class="btn btn-outline-danger btn-sm"
+            for="s-age-reset"
+            onclick="updateSuspectAge('None')"
+          >
+            Reset age</label
+          >
+          <br />
+          <span class="mt-1 filter-label">Sex:</span>
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-s-sex"
+            id="s-male"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary btn-sm mt-1"
+            for="s-male"
+            onclick="updateSuspectSex('M')"
+          >
+            Male</label
+          >
+
+         
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-v-sex"
+            id="v-female"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary btn-sm mt-1"
+            for="v-female"
+            onclick="updateVictimSex('F')"
+          >
+            Female</label
+          >
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-v-sex"
+            id="v-sex-reset"
+            autocomplete="off"
+            checked
+          />
+          <label
+            class="btn btn-outline-danger btn-sm mt-1"
+            for="v-sex-reset"
+            onclick="updateVictimSex('None')"
+          >
+            Reset sex</label
+          >
+        </div>
+      </div>
+      <div class="grid-item crime-total-share">
+        <p style="margin-bottom: 0.25rem">Share of all crimes</p>
+        <h1 id="crime_total_share">100%</h1>
+      </div>
+      <div class="grid-item crime-map">
+        <small>Interactive map of Manhattan</small>
+        <div id="crime_map"></div>
+      </div>
+      <div class="grid-item crime-location">
+        <small>Top crime locations</small>
+        <div id="crimes-by-location-chart"></div>
+      </div>
+      <div class="grid-item crime-category">
+        <small>Crimes by law category</small>
+        <div id="crimes-by-law-chart"></div>
+      </div>
+      <div class="grid-item crime-timeline">
+        <small>Crime rate by hour</small>
+        <div id="crimes-by-hour-chart"></div>
+      </div>
+    </div>
+    
+  </body>
+</html>
